@@ -162,7 +162,6 @@ web-dev-coursework/
 **นายจิรวัฒน์ เทียมทะนงค์ (Jirawat Thiamthanong)**  
 นักศึกษาสาขาวิชาวิศวกรรมคอมพิวเตอร์ (Computer Engineering)  
 คณะวิศวกรรมศาสตร์และเทคโนโลยี มหาวิทยาลัยเทคโนโลยีราชมงคลอีสาน (RMUTI)  
-รหัสนักศึกษา: `66172110399-8`
 
 [![GitHub](https://img.shields.io/badge/GitHub-firstphethay11-181717?style=flat-square&logo=github)](https://github.com/firstphethay11)
 
