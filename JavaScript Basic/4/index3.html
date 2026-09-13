@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="textname" value="" placeholder="ชื่อผู้ใช้">
+    <input type="password" id="password" value="" placeholder="รหัสผ่าน">
+    <button id="btn">ส่ง</button>
+
+    <div id="text">
+        <p style="color: green;"></p>
+    </div>
+    
+    <script>
+       const textname = document.getElementById('textname')
+       const pass = document.getElementById('password')
+       const bton = document.getElementById('btn')
+       const text = document.getElementById('text')
+
+        bton.onclick = function(){
+            event.preventDefault()
+            if (textname.value == '') {
+                text.innerHTML = '<p style="color: red;">กรุณากรอกชื่อผู้ใช้</p>'
+            }
+            
+            else if (pass.value.length < 6) {
+                text.innerHTML = '<p style="color: red;">รหัสผ่านต้องมีอย่างน้อย 6 ตัว</p>'
+            }
+
+            else {
+                textname.value = ''
+                pass.value = ''
+                text.innerHTML = '<p style="color: green;">ลงทะเบียนสำเร็จ!</p>'
+            }
+        }
+    </script>
+</body>
+</html>

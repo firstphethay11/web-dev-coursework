@@ -1,0 +1,1957 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Louis Vuitton", sans-serif;
+}
+
+/* ปิดเฉพาะ border ที่ใช้ debug ใน container ของคุณ */
+.container,
+.headleft,
+.headmiddle,
+.headright,
+.textproduct1,
+.contenproduct1,
+.contenproduct2,
+.box1,
+.menu1,
+.product2,
+.service,
+.card,
+.piccard,
+.textcard,
+.media2,
+.product,
+.product1,
+.span,
+.h2,
+.grid,
+.cardend,
+.linkend,
+.cardenda,
+.textser,
+.opasity,
+.logo,
+.icon,
+.icon-item,
+.textlogo,
+.icontext,
+.paghome,
+.contenpaghome {
+    border: none !important;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+.container {
+    border: 1px solid red;
+    width: 100%;
+    height: auto;
+}
+
+.head {
+    color: white;
+    height: 12vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* background-color: white; */
+    /* กว้างเต็มหน้าจอ */
+    /* สีพื้นหลัง กันโปร่ง */
+    z-index: 1000;
+    /* ให้ลอยเหนือ element อื่น */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.head i {
+    color: white;
+}
+
+/* Hover effect */
+.head:hover {
+
+    background-color: white;
+}
+
+.head:hover .menu1 i,
+.head:hover .menu1 p,
+.head:hover .headmiddle h1,
+.head:hover .headright p,
+.head:hover .icon-item i {
+    color: black;
+    
+} 
+
+/* ตอนเลื่อนลง (เหมือน hover ตลอดเวลา) */
+ .head.scrolled {
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+    
+}
+
+.head.scrolled .menu1 i,
+.head.scrolled .menu1 p,
+.head.scrolled .headmiddle h1,
+.head.scrolled .headright p,
+.head.scrolled .icon-item i {
+    color: black;
+} 
+
+
+.headleft {
+    border: 1px solid rgb(8, 37, 83);
+    width: 20%;
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headmiddle {
+    border: 1px solid rgb(8, 37, 83);
+    width: 30%;
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headmiddle h1 {
+    font-family: "Louis Vuitton", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: white;
+    font-size: 30px;
+}
+
+.headright {
+    border: 1px solid rgb(8, 37, 83);
+    width: 20%;
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-box {
+    display: none;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: white;
+    top: 60px;
+    /* ปรับตามความสูงของ header */
+    left: 0;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 8vh;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+}
+
+.floating-btn {
+    position: fixed;
+    bottom: 50px;
+    right: 40px;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    z-index: 1002;
+
+    /* ซ่อนปุ่มตอนเริ่มต้น */
+    opacity: 0;
+    transition: opacity 0.5s ease; /* ทำให้ค่อยๆ ปรากฏ */
+}
+
+.floating-btn.show {
+    opacity: 1; /* เมื่อมีคลาส show จะปรากฏ */
+}
+
+/* รูปในปุ่ม */
+.floating-btn img {
+    width: fit-content;
+    height: fit-content;
+    margin-right: 10px;
+}
+
+/* กล่องสนทนา */
+.chat-box {
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    display: none;
+    z-index: 1001;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 530px;
+    width: 335px;
+}
+
+.chat-box h3 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    opacity: 0.7;
+    font-size: 14px;
+}
+
+.chat-box input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    opacity: 0.3;
+}
+
+.chat-box input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    opacity: 0.3;
+    font-size: 15px;
+}
+
+/* ปุ่มปิด */
+.chat-box .close-btn {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    height: fit-content;
+}
+
+.close-btn img {
+    width: 20px;
+    height: 20px;
+    transform: rotate(90deg);
+}
+
+
+
+.closetalk {
+    padding-bottom: 20px;
+}
+
+
+
+#closetalkimg {
+    width: 20px;
+    /* ปรับขนาดรูป */
+    height: 20px;
+}
+
+.close-btn img {
+    width: 16px;
+    /* ปรับขนาดปุ่ม close */
+    height: 16px;
+    cursor: pointer;
+}
+
+.agree {
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    gap: 10px;
+}
+
+
+/* checkbox ปกติ ขนาดเล็ก */
+.agree input[type="checkbox"] {
+    margin: 2px;
+    display: flex;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: rgb(0, 0, 0);
+    /* สีติ๊กถูกและพื้นหลังเมื่อเช็ค */
+}
+
+.textagree{
+    font-size: 16px;
+    margin-top: 25px;
+
+}
+
+.chat-box button{
+    width:100%; 
+    padding:15px; 
+    background:black; 
+    color:white; 
+    border:none; 
+    border-radius:30px;
+    font-size: 15px;
+    margin-top: 35px;
+}
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu1 {
+    border: 1px solid rgb(27, 182, 177);
+    width: 80px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ครอบกล่องกากะบาทและปิด */
+.x {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 50px;
+    box-sizing: border-box;
+    gap: 10px;
+}
+
+.x p {
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.l-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.r-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.ic {
+    height: 100%;
+    display: none;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -480px;
+    /* แก้ใส่หน่วย px */
+    width: 480px;
+    max-width: 80%;
+    /* responsive */
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1001;
+    overflow-y: auto;
+}
+
+/* Sidebar active */
+.sidebar.active {
+    left: 0;
+}
+
+.close-btn {
+    width: 10%;
+    height: 100%;
+    /* กำหนดความสูง */
+    background: white;
+    z-index: 1001;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Overlay */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.91);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+/* Overlay หัวใจ (wishlist) */
+#overlay-heart {
+    position: fixed;
+    top: 80px;
+    /* ความสูง header */
+    left: 0;
+    width: 100%;
+    height: calc(100% - 110px);
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+
+/* Overlay active */
+#overlay.active,
+#overlay-heart.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.data-menu1 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.data-menu {
+    width: 80%;
+    position: relative;
+
+}
+
+/* สไตล์ลิสต์เมนู */
+.data-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.data-menu ul li {
+    margin: 10px 0;
+}
+
+.data-menu ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 25px;
+    position: relative;
+    padding-bottom: 5px;
+    width: 100%;
+    margin-top: 12px;
+    flex-direction: row;
+    display: flex;
+    
+}
+
+/* เส้นใต้แบบ animation */
+.data-menu ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    background-color: #000;
+    transition: width 0.3s ease;
+}
+
+.data-menu ul li a:hover::after {
+    width: 100%;
+}
+
+/* เพิ่มเครื่องหมาย > ตอน hover */
+.data-menu ul li a::before {
+    content: ">";
+    position: absolute;
+    right: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease, right 0.3s ease;
+}
+
+.data-menu ul li a:hover::before {
+    opacity: 1;
+    right: -15px;
+    /* ขยับเข้ามาเล็กน้อย */
+}
+
+/* เวลา hover ที่ ul → ทุก a จะจางลง */
+.data-menu ul:hover li a {
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+/* ยกเว้นอันที่ hover อยู่ ให้กลับมาชัด */
+.data-menu ul li a:hover {
+    opacity: 1;
+}
+
+
+.dever1 #dever1 {
+    margin-top: 15px;
+}
+
+.dever2 {
+    margin-top: 50px;
+}
+
+/* กดปุ่มข้างล่างของ sidebar */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 350px;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* ปุ่ม Toggle */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #aaa;
+    transition: .4s;
+    border-radius: 50px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: rgb(255, 255, 255);
+    transition: .4s;
+    border-radius: 50%;
+
+}
+
+input:checked+.slider {
+    background-color: black;
+    /* โทน Louis Vuitton */
+}
+
+input:checked+.slider:before {
+    transform: translateX(24px);
+}
+
+/* ----------------------------------------------------------------- */
+
+.help {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid #ccc;
+
+}
+
+.help p {
+    margin-left: 50px;
+    margin-top: 10px;
+
+}
+
+/* ส่วนท้ายสุดของฝั่งซ้าย */
+.deverloop-data {
+    width: 100%;
+    height: 350px;
+    padding: 40px;
+}
+
+
+
+
+.logo {
+    border: 1px solid rgb(16, 34, 33);
+    width: 25px;
+    height: 25px;
+}
+
+
+.logo i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    /* ขนาดไอคอน */
+}
+
+/* จัดกล่องหลัก */
+.icon-container {
+    display: flex;
+    /* เรียงไอคอนเป็นแนวนอน */
+    justify-content: flex-end;
+    /* ชิดขวา (หรือเปลี่ยนเป็น center/space-around ได้) */
+    align-items: center;
+    /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+    gap: 20px;
+    /* ระยะห่างระหว่างไอคอน */
+    padding: 10px 20px;
+    /* ระยะห่างด้านใน */
+}
+
+/* สไตล์ของแต่ละไอคอน */
+.icon-item {
+    font-size: 22px;
+    /* ขนาดไอคอน */
+    color: white;
+    /* สีพื้นฐาน */
+    cursor: pointer;
+    /* เปลี่ยนเป็นรูปมือเมื่อ hover */
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* เอฟเฟกต์เวลา hover */
+.icon-item:hover {
+    color: #91c2f7;
+    /* เปลี่ยนสี (ฟ้า) */
+    transform: scale(1.2);
+    /* ขยายเล็กน้อย */
+}
+
+
+.textlogo {
+    border: 1px solid rgb(27, 182, 177);
+    width: 45px;
+    height: 25px;
+    font-family: monospace;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+#t1 {
+    display: flex;
+    justify-content: center;
+}
+
+.icontext {
+    border: 1px solid rgb(20, 157, 20);
+    width: 70px;
+    height: 25px;
+    font-family: monospace;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.icon {
+    border: 1px solid rgb(31, 178, 17);
+    width: 125px;
+    height: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.icon i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    /* ขนาดไอคอน */
+}
+
+.icon1 {
+    border: 1px solid rgb(16, 34, 33);
+    width: 25px;
+    height: 25px;
+}
+
+.paghome {
+    border: 1px solid rgb(16, 34, 33);
+    width: 100%;
+    height: 94vh;
+    position: relative;
+    overflow: hidden;
+    /* กันวิดีโอหลุดออกนอก */
+}
+
+.contenpaghome {
+    border: 2px solid rgb(5, 97, 92);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    /* ให้อยู่ล่าง */
+}
+
+
+.video-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenpaghome img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.6);
+
+}
+
+.contenpaghome::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.5) 0%,
+            /* ด้านบนมืด */
+            rgba(0, 0, 0, 0) 50%,
+            /* ตรงกลางโปร่งใส */
+            rgba(0, 0, 0, 0.5) 100%
+            /* ด้านล่างมืด */
+        );
+    pointer-events: none;
+}
+
+.textpaghome {
+    width: fit-content;
+    padding: 15px 30px;
+    position: absolute;
+    bottom: 7%;
+    /* สูงจากขอบล่าง 7% */
+    left: 50%;
+    /* กึ่งกลางแนวนอน */
+    transform: translateX(-50%);
+    /* เลื่อนกลับครึ่งความกว้างให้ตรงกลาง */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    z-index: 10;
+}
+
+.textpaghome span {
+    font-size: 10px;
+    color: white;
+}
+
+.textpaghome h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.textpaghome a {
+    color: white;
+    text-decoration: underline;
+    /* เพิ่มเส้นใต้ถ้าต้องการ */
+}
+
+
+.product {
+    border: 1px solid rebeccapurple;
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.product1 {
+    border: 1px solid rgb(20, 32, 102);
+    width: 100%;
+    height: auto;
+}
+
+.textproduct1 {
+    border: 1px solid black;
+    width: 100%;
+    height: 70px;
+    font-family: "Louis Vuitton", sans-serif;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenproduct1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* เริ่มต้น 4 box เต็ม */
+}
+
+.box1 {
+    /* border: 1px solid rgb(197, 52, 110); */
+    background-color: #fff;
+    /* ให้มีพื้นหลังขาว */
+    padding: 8px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.picbox img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.picbox img {
+    width: 100%;
+    height: 100%;
+}
+
+.textbox {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.media2 {
+    border: 1px solid rgb(62, 4, 4);
+    width: 100%;
+    height: 120vh;
+    margin-top: 50px;
+}
+
+.media2 video {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+.media2 img {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    /* ทำให้วิดีโอเต็มจอและไม่ยืดผิดสัดส่วน */
+}
+
+.product2 {
+    border: 1px solid rgb(9, 67, 225);
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+}
+
+.span {
+    border: 1px solid rgb(6, 126, 54);
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h2 {
+    border: 1px solid rgb(6, 126, 54);
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.contenproduct2 {
+    border: 1px solid rgb(12, 37, 22);
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding-left: 8%;
+    /* ลองเอา padding ออกชั่วคราว */
+    padding-right: 8%;
+}
+
+.card {
+    border: 1px solid rgb(12, 144, 144);
+    background: linear-gradient(rgba(4, 4, 4, 0.166), rgba(255, 255, 255, 0.614));
+    display: grid;
+}
+
+.piccard {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.piccard img {
+    width: 100%;
+    height: auto;
+    /* ปรับตามอัตราส่วนรูป */
+    max-height: 50%;
+    /* เพิ่มสูงสุดตามต้องการ */
+    object-fit: contain;
+    display: block;
+}
+
+.piccard p {
+    position: absolute;
+    z-index: 3;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+}
+
+/* ส่วนข้อความ */
+.textcard {
+    border: 1px solid rgb(40, 23, 117);
+    width: 100%;
+    padding: 10px;
+    /* ข้อความไม่ชิดขอบ */
+    text-align: left;
+    /* จัดข้อความซ้าย */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* จัดตรงกลางแนวตั้ง */
+    box-sizing: border-box;
+    min-height: 60px;
+    /* ความสูงขั้นต่ำ */
+    margin-top: 70px;
+}
+
+.pcard {
+    opacity: 0.5;
+}
+
+#product-list-1,#product-list-2{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#toast {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    color: black;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    max-width: 90%;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    /* ปิดก่อน */
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 9999;
+}
+
+#toast.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#toast img {
+    width: 70px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    background: linear-gradient(rgba(4, 4, 4, 0.166), rgba(255, 255, 255, 0.614));
+}
+
+#toast .close-btn {
+    margin-left: auto;
+    cursor: pointer;
+    font-size: 24px;
+    background: none;
+    border: none;
+}
+
+
+
+/* Heart */
+.heart {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+    color: black;
+    transition: color 0.3s ease;
+    z-index: 2;
+}
+
+.heart.active {
+    color: rgb(0, 0, 0);
+}
+
+
+.find {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.find a {
+    border: 1px solid black;
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.1s ease;
+}
+
+/* Hover effect */
+.find a:hover {
+    border: 3px solid black;
+    cursor: pointer;
+}
+
+
+.service {
+    border: 1px solid skyblue;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.textser {
+    border: 1px solid black;
+    width: 520px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.opasity {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#textserp {
+    font-size: 30px;
+
+}
+
+#textseropa {
+    opacity: 50%;
+
+}
+
+.endconten {
+    width: 100%;
+    height: auto;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.grid {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    gap: 15px;
+}
+
+.endconten {
+    width: 100%;
+    height: auto;
+    padding-left: 8%;
+    padding-right: 8%;
+    overflow: hidden;
+    /* ป้องกัน scroll แนวตั้ง */
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 200px;
+}
+
+
+
+
+.cardend img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+
+
+
+.linkend {
+    border: 1px solid red;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.linkend p {
+    font-size: 18px;
+}
+
+.cardenda {
+    display: flex;
+    gap: 5px;
+    /* ช่องว่างระหว่างลิงก์ */
+    flex-wrap: wrap;
+    /* ให้ wrap ลงแถวใหม่เมื่อเต็ม */
+}
+
+.cardenda a {
+    color: #000000;
+    margin-top: 15px;
+}
+
+/* -------------------------------------------------------- */
+#login-popup {
+    position: fixed;
+    top: 0;
+    right: -50%;
+    /* เลื่อนออกครึ่งหน้าจอก่อน */
+    width: 50%;
+    /* ครึ่งขวาหน้าจอ */
+    height: 100%;
+    background: white;
+    padding: 40px 30px;
+    border-radius: 0;
+    z-index: 1001;
+    display: block;
+    transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -2px 0 12px rgba(0, 0, 0, 0.3);
+    font-family: 'Arial', sans-serif;
+    overflow-y: auto;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 0;
+
+
+}
+
+/* เวลาเปิด */
+#login-popup.active {
+    right: 0;
+    /* เลื่อนเข้าครึ่งขวาเต็ม */
+}
+
+
+#login-popup .close-login:hover {
+    color: #ff4d4d;
+}
+
+/* หัวข้อ */
+#login-popup h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #222;
+}
+
+/* อินพุต */
+#login-popup input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+
+.social-login {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn-line {
+    flex: 1;
+    background: #06c755;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-google {
+    flex: 1;
+    background: #fff;
+    border: 1px solid #000;
+    padding: 12px;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divider {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 14px;
+    color: #777;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+a {
+    font-size: 12px;
+    color: #000;
+    text-decoration: underline;
+}
+
+.btn-login {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    /* เพิ่มความลื่นไหล */
+}
+
+.btn-login:hover {
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.no-account {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.no-account-p1 {
+    display: flex;
+}
+
+.no-account-p2 {
+    display: flex;
+    justify-items: left;
+    align-items: start;
+
+}
+
+#no-account-p2 {
+    margin-top: 20px;
+}
+
+.btn-outline {
+    margin-top: 10px;
+    background: #fff;
+    border: 1px solid #000;
+    color: #000;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 13px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.close-login {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #333;
+    transition: color 0.2s;
+}
+
+#forgot-pass {
+
+    display: flex;
+    gap: 10px;
+}
+
+#forgot-pass p {
+    font-size: 15px;
+}
+
+#forgot-p1 {
+
+    display: flex;
+}
+
+
+
+.myid2 {
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.login-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    /* ให้ติดบนสุด */
+    display: flex;
+    justify-content: space-between;
+    /* ซ้าย–ขวา */
+    align-items: center;
+    /* จัดแนวกลางแนวตั้ง */
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background: #fff;
+    /* พื้นหลังสีขาว (ป้องกันทับกับ content) */
+    z-index: 10;
+    /* กันไม่ให้ถูกบัง */
+
+}
+
+.social-login img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+/* ------------------------------------------------------------- */
+
+/* Reset & Basic */
+footer {
+    background: white;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* a{
+    text-decoration: none;
+    color: black;
+} */
+
+.footer-logo {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+/* Footer desktop */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: white;
+    padding-left: 8%;
+    padding-right: 8%;
+    border-bottom: 1px solid #ccc;
+    height: 300px;
+}
+
+.footer-container p {
+
+    padding-bottom: 15px;
+    font-size: 10px;
+
+}
+
+.footer-container,
+.footer-bottom {
+    font-size: 14px;
+}
+
+.footer-container li a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* สำหรับลิงก์ที่ต้องการให้มีเส้นใต้ */
+.footer-column #aaa {
+    text-decoration: underline;
+}
+
+.footer-column {
+    width: 23%;
+    margin-bottom: 20px;
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    padding-left: 8%;
+    padding-right: 8%;
+    height: 58px;
+}
+
+.country,
+.mapweb {
+    margin-top: 20px;
+}
+
+.country img {
+    width: 15px;
+    height: 20px;
+    padding-top: 10px;
+}
+
+.country a {
+    color: #000;
+}
+
+.mapweb a {
+    color: #000000;
+}
+
+/* เครื่องหมาย + - */
+.accordion-content {
+    display: none;
+    padding-left: 15px;
+    margin-top: 5px;
+}
+
+.accordion-header {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+.accordion-header .toggle {
+    font-weight: bold;
+}
+
+.img-foot-column {
+    display: none; /* ซ่อนตอนปกติ (desktop) */
+    justify-content: center;
+    align-items: center;
+    size: 100px;
+}
+
+/* responsive ---------------------------------------------------------------------------------- */
+
+@media screen and (max-width:1280px) {
+    #login-popup {
+        right: -100%;
+        /* เลื่อนออกครึ่งหน้าจอก่อน */
+        width: 100%;
+        /* ครึ่งขวาหน้าจอ */
+    }
+}
+
+@media screen and (max-width:1022px) {
+    .icontext {
+        border: 1px solid rgb(20, 157, 20);
+        width: 70px;
+        height: 25px;
+        font-family: monospace;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+
+    /* ซ่อนข้อความภายใน */
+    .icontext span,
+    .icontext p {
+        display: none;
+        /* ข้อความจะหายไป */
+    }
+
+    #login-popup {
+        right: -100%;
+        /* เลื่อนออกครึ่งหน้าจอก่อน */
+        width: 100%;
+        /* ครึ่งขวาหน้าจอ */
+    }
+}
+
+@media (min-width: 769px) {
+    .accordion-header .toggle {
+        display: none;
+    }
+
+    .accordion-content {
+        display: block !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* header */
+    .head {
+        background-color: white;
+        /* พื้นหลังขาว */
+    }
+
+    .head:hover {
+        box-shadow: none !important;
+        /* ยกเลิก shadow */
+    }
+
+    .head {
+        color: white;
+        height: 8vh;
+    }
+
+    /* ตัวอักษรและไอคอนทั้งหมดเป็นสีดำ */
+    .head .menu1 i,
+    .head .menu1 p,
+    .head .headmiddle h1,
+    .head .headright p,
+    .head .icon-item i {
+        color: black !important;
+    }
+
+    .headmiddle h1 {
+        font-size: 20px;
+        
+    }
+
+    .search-box {
+        display: block;
+    }
+
+
+    /* ซ่อนข้อความ "เมนู" และ "ค้นหา" */
+    .textlogo p {
+        display: none;
+    }
+
+
+    /* ซ่อนไอคอนหัวใจตลอดเวลา */
+    .icon-container .fa-heart {
+        display: none !important;
+    }
+
+
+
+    .hidden {
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+    }
+
+    .headleft .menu1 .logo {
+        margin-left: 35px;
+        /* ปรับค่าตามต้องการ */
+    }
+
+    /* สินค้า grid */
+    .contenproduct1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contenproduct2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Scrollable card grid */
+    .grid {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .cardend {
+        width: 90%;
+    }
+
+    .cardenda a {
+        display: flex;
+        gap: 5px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sidebar {
+        width: 100%;
+        max-width: 100%;
+        left: -100%;
+        /* ซ่อนทั้งจอ */
+    }
+
+    .ic {
+        display: block;
+    }
+
+    /* sidebar ข้้างใน */
+    /* ซ่อนเส้นใต้ */
+    .data-menu ul li a::after {
+        display: none;
+    }
+
+    /* แสดง > ค้างไว้ */
+    .data-menu ul li a::before {
+        content: ">";
+        opacity: 1;
+        right: -15px;
+        /* คงตำแหน่งชิดเหมือน hover */
+    }
+
+    /* ไม่ต้องมี transition ขยับ */
+    .data-menu ul li a:hover::before {
+        right: -15px;
+    }
+
+    /* sidebar */
+    .sidebar {
+        width: 100%;
+        max-width: 100%;
+        left: -100%;
+        /* ซ่อนทั้งจอ */
+    }
+
+    /* ปุ่มปิดและแถบบน */
+    .sidebar .x {
+        position: relative;
+        /* หรือ absolute ก็ได้
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* background: rgba(0, 0, 0, 0.6); */
+        display: flex;
+        align-items: center;
+        padding: 8px 15px;
+        /* ลด padding ให้ชิดบน */
+        z-index: 10;
+    }
+
+    .sidebar .x p,
+    .sidebar .close-btn {
+        color: #000000;
+        margin: 0;
+        background: none;
+        border: none;
+        height: auto;
+        width: fit-content;
+        margin-right: 3px;
+
+    }
+
+    .x p {
+        display: none;
+    }
+
+    .sidebar .close-btn {
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    /* ลดช่องว่างด้านบนของเมนู */
+    .sidebar .data-menu1 {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .sidebar .data-menu1 ul {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .sidebar .data-menu1 ul li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .sidebar .data-menu1 ul li a {
+        display: block;
+        padding: 10px 15px;
+        /* ปรับความสูงเมนู */
+    }
+
+    /* ซ่อนเส้นใต้และแสดง > ค้างไว้ */
+    .data-menu ul li a::after {
+        display: none;
+    }
+
+    .data-menu ul li a::before {
+        content: ">";
+        opacity: 1;
+        right: -15px;
+    }
+
+    .data-menu ul li a:hover::before {
+        right: -15px;
+    }
+
+    .paghome {
+        height: 83vh;
+    }
+
+    .textpaghome {
+        width: 400px;
+        bottom: 4%;
+    }
+
+    .textpaghome h2 {
+        font-size: 26px;
+        font-family: "Louis Vuitton", sans-serif;
+    }
+
+    .textpaghome a {
+        margin-top: 10px;
+    }
+
+    .textproduct1 h1 {
+        font-size: 26px;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    .footer-container {
+        display: block;
+    }
+
+
+
+    .footer-column {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .accordion-content {
+        display: none;
+        padding-left: 15px;
+        margin-top: 5px;
+    }
+
+    .accordion-header {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        border-bottom: 1px solid #ccc;
+        padding: 10px 0;
+    }
+
+    .accordion-header .toggle {
+        font-weight: bold;
+    }
+
+    /* Footer default (เต็มจอ) */
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        margin: o;
+        padding: 0;
+    }
+
+    .footer-logo {
+        order: 1;
+        /* อยู่ท้ายสุด */
+        text-align: center;
+        padding: 30px;
+        top: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    .footer-container {
+        order: 2;
+        margin-top: -30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+
+        /* ข้อมูลทั้งหมดตรงกลาง */
+    }
+
+    .footer-bottom {
+        order: 3;
+        /* แผนผังเว็บไซต์ + จัดส่ง */
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+        margin-top: -0px;
+    }
+
+    .footer-bottom a {
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    #help-bottom {
+        border-top: 1px solid #ccc;
+    }
+
+    .footer-container p {
+        font-size: 15px;
+        margin: 0;
+    }
+
+    .endconten {
+        padding-bottom: 18px;
+        border: none;
+    }
+
+    #like-foot {
+        border: none;
+    }
+
+    .service {
+        margin-top: 80px;
+    }
+
+    .cardend {
+        height: 100vh;
+        /* 3 ช่อง + gap 15px*2 */
+        flex-shrink: 0;
+        /* ป้องกันบีบเมื่อ scroll */
+    }
+
+    .cardend img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+    }
+
+    .grid {
+        width: 100%;
+        height: 820px;
+
+    }
+
+    #login-popup {
+        right: -100%;
+        /* เลื่อนออกครึ่งหน้าจอก่อน */
+        width: 100%;
+        /* ครึ่งขวาหน้าจอ */
+    }
+
+     .img-foot-column {
+        display: flex; /* โชว์ตอน responsive */
+    }
+}
+
+
+/* Mobile: 480px ลงมา → 1 box ต่อแถว */
+@media (max-width: 480px) {
+    .contenproduct1 {
+        grid-template-columns: 1fr;
+    }
+
+    .contenproduct2 {
+        grid-template-columns: 1fr;
+    }
+
+    .piccard {
+        height: 30vh;
+    }
+}

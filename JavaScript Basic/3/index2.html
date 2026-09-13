@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">กดฉัน</button>
+    <p id="count">จำนวนครั้งที่ดับเบิลคลิก: 0</p>
+</body>
+
+<script>
+    
+    const bton = document.getElementById('btn')
+    const tagc = document.getElementById('count')
+    let c = 0
+    
+    bton.ondblclick = function () {
+        c = c + 1
+        tagc.innerText = `จำนวนครั้งที่ดับเบิลคลิก: ${c}`
+
+        if (c == 5) {
+            bton.disabled = true
+        }
+    }
+
+</script>
+</html>

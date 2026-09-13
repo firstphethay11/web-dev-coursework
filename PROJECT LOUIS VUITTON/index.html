@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เว็ปไซต์อย่างเป้นทางการของ LOUIS VUITTON</title>
+    <link rel="stylesheet" href="./CSS/index.css">
+    <!-- Favicon ปกติ -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/Logo/logo-LOUIS VUITTON.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/Logo/logo-LOUIS VUITTON.png">
+
+    <!-- Apple Devices -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/Logo/logo-LOUIS VUITTON.png">
+
+    <!-- Android / Progressive Web App -->
+    <link rel="icon" type="image/png" sizes="192x192" href="./img/Logo/logo-LOUIS VUITTON.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./img/Logo/logo-LOUIS VUITTON.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">
+            <div class="headleft">
+                <div class="menu">
+                    <div class="menu">
+                        <div class="menu1">
+                            <div class="logo">
+                                <i class="fas fa-bars" id="openMenu"></i>
+                            </div>
+                            <div class="textlogo" id="t1">
+                                <p>เมนู</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu1">
+                        <div class="logo">
+                            <i class="fas fa-search" id="searchIcon"></i>
+                        </div>
+                        <div class="textlogo">
+                            <p>ค้นหา</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="headmiddle">
+                <h1>LOUIS VUITTON</h1>
+            </div>
+
+            <div class="headright">
+                <div class="icontext">
+                    <p>ติดด่อเรา</p>
+                </div>
+                <div class="icon-container">
+                    <div class="icon-item">
+                        <i class="far fa-heart" id="viewCartBtn"></i>
+                    </div>
+                    <!-- ไอคอน user -->
+                    <div class="icon-item">
+                        <i class="far fa-user" id="userIcon"></i>
+                    </div>
+
+                    <div class="icon-item">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="floating-btn" id="chatBtn">
+            <div class="img-right-position">
+                <img src="./img/Logo/20-TH_new_white_Tab.svg" alt="LV Logo">
+            </div>
+
+        </div>
+
+        <!-- กล่องสนทนา -->
+        <div class="chat-box" id="chatBox">
+            <div class="closetalk">
+                <p><img src="./img/Logo/logo-LOUIS VUITTON.jpg" alt="" id="closetalkimg">สนทนากับเรา</p>
+                <div class="close-btn" id="closeChat"><img src="./img/Logo/arrow.png" alt=""></div>
+            </div>
+
+            <h3>นโยบายความเป็นส่วนตัว</h3>
+            <input type="email" placeholder="อีเมล">
+            <div class="textagree">
+                <p>ในกรณีที่มีการรวบรวมข้อมูลส่วนบุคคลของคุณในระหว่างความช่วยเหลือ ‘แชท’
+                    ข้อมูลส่วนบุคคลของคุณจะได้รับการประมวลผลตามนโยบายความเป็นส่วนตัวของหลุยส์ วิตตอง
+
+                </p>
+            </div>
+            <div class="agree">
+                <input type="checkbox" id="agree">
+                <label for="agree">ฉันยอมรับ</label>
+            </div>
+            <button>
+                เริ่มต้นการสนทนา
+            </button>
+        </div>
+
+        <!-- Search Box (แสดงตอน responsive) -->
+        <div class="search-box">
+            <input type="text" placeholder="ค้นหา 'เครื่องสำอาง'">
+        </div>
+
+        <!-- ตระกร้าสินค้ารูปหัวใจ -->
+        <div class="sidebar" id="cart-sidebar">
+            <div class="x">
+                <div class="l-content">
+                    <div class="close-btn ic" id="closeCartSidebar">&times;</div>
+                    <p>ตะกร้าสินค้าของคุณ</p>
+                </div>
+            </div>
+            <div id="cart-items-container">
+            </div>
+        </div>
+
+        
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="x">
+                <div class="l-content">
+                    <div class="close-btn ic" id="closeMenu">&times;</div>
+                    <p>ปิด</p>
+
+                    <div class="search-btn ic">
+                        <i class="fas fa-search" id="searchIcon"></i>
+                    </div>
+                </div>
+                <div class="ic">
+                    <h1 class="lv-logo__wrap"><span><svg width="151" height="16" viewBox="0 0 151 16"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path
+                                    d="M67.637.293l3.816 9.205L75.269.293h2.725L71.746 15.39l-.293.294-.294-.294L64.911.293h2.726zm-13.712 0c1.468 0 2.86.767 3.627 1.887l-1.467 1.468h-.462c-.304-.65-.973-1.048-1.698-1.048-.863 0-1.672.71-1.72 1.614-.035.68.277 1.105.84 1.468.606.391.854.554 1.677 1.006.897.493 3.166 1.46 3.166 4.005 0 2.509-2.097 4.843-4.802 4.843-.347 0-.976-.039-1.446-.147-1.325-.321-2.129-.822-2.998-1.845l1.887-1.929.65.545c.293.23.937.693 1.55.776 1.246.169 2.082-.655 2.244-1.468.129-.642-.034-1.6-1.069-2.096 0 0-1.866-1.037-2.684-1.51-.833-.482-1.719-1.798-1.719-3.375 0-1.174.538-2.311 1.405-3.103.67-.614 1.589-1.09 3.019-1.09zM138.67 0l9.77 9.77V.587l.294-.294h1.929l.294.294v14.802h-.462l-9.602-9.602v9.309l-.294.293h-1.929l-.293-.293V.293L138.67 0zm-28.807.293v2.223l-.294.293h-2.222v12.58h-2.516V2.809h-2.516V.587l.294-.294h7.254zm9.225 0v2.223l-.294.293h-2.222v12.58h-2.516V2.809h-2.516V.587l.294-.294h7.254zM2.516.293v12.58h5.032v2.516H0V.587L.293.293h2.223zm14.257 0a7.548 7.548 0 110 15.096 7.548 7.548 0 010-15.096zm111.54 0a7.548 7.548 0 110 15.096 7.548 7.548 0 010-15.096zm-98.415 0l.293.294v9.77a2.516 2.516 0 005.032 0V.587l.294-.294h1.929l.293.294v9.77a5.032 5.032 0 01-10.064 0V.587l.294-.294h1.929zm15.389 0v14.803l-.294.293h-2.222V.587l.293-.294h2.223zm37.446 0l.293.294v9.77a2.516 2.516 0 005.032 0V.587l.294-.294h1.928l.294.294v9.77a5.032 5.032 0 01-10.064 0V.587l.294-.294h1.929zm15.389 0v14.803l-.294.293h-2.222V.587l.293-.294h2.223zM16.772 2.81a5.032 5.032 0 10.001 10.065 5.032 5.032 0 000-10.065zm111.541 0a5.032 5.032 0 100 10.065 5.032 5.032 0 000-10.065z"
+                                    fill-rule="evenodd"></path>
+                            </svg> </span></h1>
+                </div>
+                <div class="r-content">
+                    <div class="user-btn ic">
+                        <i class="far fa-user" id="userIcon"></i>
+                    </div>
+                    <div class="shopping-btn ic">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="data-menu1">
+                <div class="data-menu">
+                    <ul>
+                        <li><a href="#"><span>ของขวัญและการสร้างสรรค์ผลงาน ของคุณ</span></a></li>
+                        <li><a href="#"><span>ผลิตภัณฑ์ใหม่</span></a></li>
+                        <li><a href="#"><span>กระเป๋าและกระเป๋าสตางค์</span></a></li>
+                        <li><a href="#"><span>ผู้หญิง</span></a></li>
+                        <li><a href="#"><span>ผู้ชาย</span></a></li>
+                        <li><a href="#"><span>น้ำหอมและความงาม</span></a></li>
+                        <li><a href="#"><span>จิวเวลรี่</span></a></li>
+                        <li><a href="#"><span>นาฬิกา</span></a></li>
+                        <li><a href="#"><span>ทรังก์ การเดินทาง และ บ้าน</span></a></li>
+                        <li><a href="#"><span>บริการ</span></a></li>
+                        <li><a href="#"><span>The Maison Louis Vuitton</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="help">
+                <p>ต้องการความช่วยเหลือใช่ไหม</p>
+                <p>1800-01-1112</p>
+            </div>
+
+            <div class="deverloop-data">
+                <div class="dever1">
+                    <p>การพัฒนาอย่างยั่งยืน</p>
+                    <p id="dever1">ร้านค้า</p>
+                    <p id="dever1">จัดส่งไปที่:ประเทศไทย</p>
+
+                </div>
+                <div class="dever2">
+                    <div class="toggle-container">
+                        <span>การเข้าถึง: เพิ่มคอนทราสต์</span>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        <!-- พื้นหลังสีดำเมื่อกดเมนู -->
+
+        <div id="overlay"></div>
+
+        <div class="paghome">
+            <div class="contenpaghome">
+                <video id="video-bg" autoplay loop muted playsinline class="video-bg">
+                    <source src="./img/Media/vA4GCp4drBPlWsquRrnri9Xs_9.mp4" type="video/mp4">
+                    เบราว์เซอร์ของคุณไม่รองรับวิดีโอแท็ก
+                </video>
+            </div>
+
+            <div class="textpaghome">
+                <span>สุภาพสตรี</span>
+                <h2>La Beauté Louis Vuitton</h2>
+                <a href="">ค้นพบซีเลกชัน</a>
+            </div>
+        </div>
+
+
+
+        <div class="product">
+
+            <div class="product1">
+                <div class="textproduct1">
+                    <h1>ค้นพบจักรวาลแห่งความงาม</h1>
+                </div>
+                <div class="contenproduct1">
+
+                    <div class="box1">
+                        <div class="picbox">
+                            <img src="./img/product/LV_Rouge_Matte_WW_HP_Category_DII.jpg" alt="กระเป๋าถือ">
+                        </div>
+                        <div class="textbox">
+                            <p>LV Rouge</p>
+                        </div>
+                    </div>
+
+                    <div class="box1">
+                        <div class="picbox">
+                            <img src="./img/product/LV_Balm_WW_HP_Category_DII.jpg" alt="แฟชั่นจิวเวลรี่">
+                        </div>
+                        <div class="textbox">
+                            <p>LV Baume</p>
+                        </div>
+                    </div>
+
+                    <div class="box1">
+                        <div class="picbox">
+                            <img src="img/product/LV_Ombres_WW_HP_Category_DII.jpg"
+                                alt="กระเป๋าสตางค์เครื่องหนังขนาดเล็ก">
+                        </div>
+                        <div class="textbox">
+                            <p>LV Ombres</p>
+                        </div>
+                    </div>
+
+                    <div class="box1">
+                        <div class="picbox">
+                            <img src="./img/product/Beauty_Accessories_WW_HP_Category_DII.jpg" alt="รองเท้า">
+                        </div>
+                        <div class="textbox">
+                            <p>แอคเซสเซอรี่ความงาม</p>
+                        </div>
+                    </div>
+
+                    <!-- <div class="box1">
+                        <div class="picbox">
+                            <img src="./img/product/Wacc_Silk_Bandeaus_MD_WW_HP_Category_DII 5.jpg" alt="แอคเซสเซอรี่">
+                        </div>
+                        <div class="textbox">
+                            <p>แอคเซสเซอรี่</p>
+                        </div>
+                    </div>
+
+                    <div class="box1">
+                        <div class="picbox">
+                            <img src="./img/product/Perfumes_MD_WW_HP_Category_DII 6.webp" alt="น้ำหอม">
+                        </div>
+                        <div class="textbox">
+                            <p>น้ำหอม</p>
+                        </div>
+                    </div>
+
+                    <div class="box1">
+                        <div class="picbox">
+                            <img src="./img/product/Jewelry_MD_WW_HP_Category_DII 7.webp" alt="ไฟน์จิวเวลรี่">
+                        </div>
+                        <div class="textbox">
+                            <p>ไฟน์จิวเวลรี่</p>
+                        </div>
+                    </div>
+
+                    <div class="box1">
+                        <div class="picbox">
+                            <img src="./img/product/Newborn_MD_WW_HP_Category_DII 8.jpg" alt="ของขวัญ">
+                        </div>
+                        <div class="textbox">
+                            <p>ของขวัญ</p>
+                        </div>
+                    </div> -->
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="media2">
+
+            <!-- <video autoplay loop muted playsinline width="500">
+                <source src="./img/Media/vidio2 LOUIS VUITTON.mp4" type="video/mp4">
+            </video> -->
+            <img src="./img/conten/HP_SG_TFE_DI3.jpg" alt="">
+
+        </div>
+
+        <!-- Overlay สำหรับ wishlist (หัวใจ) -->
+        <div id="overlay-heart"></div>
+
+        <!-- Toast แจ้งเตือน -->
+        <div id="toast"></div>
+
+        <div class="product2">
+            <div class="span">
+                <span>สุภาพสตรี</span>
+            </div>
+            <div class="h2">
+                <h2>The Fall Edit</h2>
+            </div>
+
+            <div class="contenproduct2" id="product-list-1"></div> <!-- สำหรับ category_id 1 -->
+
+            <div class="find">
+                <a href="">ค้นพบคอลแลคชั่น</a>
+            </div>
+
+        </div>
+
+
+        <div class="media2">
+
+            <img src="./img/conten/MEN_BC_LV_AEROGRAM_AUG25_03_DI3.jpg" alt="">
+
+        </div>
+
+        <div class="product2">
+            <div class="textproduct2">
+                <div class="span">
+                    <span>สุภาพบุรุษ</span>
+                </div>
+                <div class="h2">
+                    <h2>กระเป๋า</h2>
+                </div>
+
+            </div>
+            <!-- ------------------------------contenproduct--------------------------------------- -->
+            <div class="contenproduct2" id="product-list-2"></div> <!-- สำหรับ category_id 2 -->
+
+        </div>
+
+        <div class="find">
+            <a href="">ค้นพบคอลแลคชั่น</a>
+        </div>
+
+    </div>
+
+    <div class="service">
+        <div class="textser">
+            <p id="textserp">บริการของหลุยส์ วิตตอง</p>
+            <div class="opasity">
+                <p id="textseropa">หลุยส์ วิตตอง มีบริการห่อผลิตภัณฑ์สำหรับทุกคำสั่งซื้อ โดยบรรจุในกล่องอันเป็น
+                </p>
+                <p id="textseropa">เอกลักษณ์ของเมซงอย่างระมัดระวัง</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="endconten">
+        <div class="grid">
+            <div class="cardend">
+                <img src="./img/productend/LV_Personalization_WW_1.webp" alt="">
+                <div class="linkend">
+                    <p>สร้างสรรค์ผลงานในแบบของคุณ</p>
+                    <div class="cardenda">
+                        <a href="">ค้นพบ Mon monogram</a>
+                        <a href="">สำรวจผลงานรังสรรค์ทั้งหมด</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="cardend">
+                <img src="./img/productend/LV_Gifting_WW_HP_2.webp" alt="">
+                <div class="linkend">
+                    <p>ศิลปะแห่งการมอบของขวัญ</p>
+                    <div class="cardenda">
+                        <a href="">ของขวัญสำหรับผู้หญิง</a>
+                        <a href="">ของขวัญสำหรับผู้ชาย</a>
+                    </div>
+                </div>
+            </div>
+            <div class="cardend">
+                <img src="./img/productend/LV_ContactUs_WW_HP 3.webp" alt="">
+                <div class="linkend">
+                    <p>บริการ</p>
+                    <div class="cardenda">
+                        <a href="">ติดต่อเรา</a>
+                        <a href=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <!-- LOUIS VUITTON บนสุดใน responsive -->
+        <!-- Footer Sections -->
+        <div class="footer-container">
+            <!-- ช่วย -->
+            <div class="footer-column">
+                <p class="accordion-header" id="help-bottom">ช่วย <span class="toggle">+</span></p>
+                <ul class="accordion-content">
+                    <li>ที่ปรึกษาลูกค้าพร้อมให้บริการทุกวัน สามารถติดต่อเราได้ที่ <a href="" id="aaa">1800-01-1112</a>
+                        ตั้งแต่ 10.00 น. -
+                        19.00 น.</li>
+                    <li><a href="#" id="aaa">แชท</a> หรือ <a href="#" id="aaa">ส่งอีเมลถึงเราได้</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">การดูแลรักษาผลิตภัณฑ์</a></li>
+                    <li><a href="#">การจัดส่งและรับคืน</a></li>
+                    <li><a href="#">ค้นหาร้าน</a></li>
+                </ul>
+            </div>
+
+            <!-- บริการ -->
+            <div class="footer-column">
+                <p class="accordion-header">บริการ <span class="toggle">+</span></p>
+                <ul class="accordion-content">
+                    <li><a href="#">การซ่อมแซม</a></li>
+                    <li><a href="#">สร้างสรรค์ผลงานในแบบของคุณ</a></li>
+                    <li><a href="#">ศิลปะแห่งการมอบของขวัญ</a></li>
+                    <li><a href="#">ดาวน์โหลดแอพของเรา</a></li>
+                </ul>
+            </div>
+
+            <!-- เกี่ยวกับหลุยส์ วิตตอง -->
+            <div class="footer-column">
+                <p class="accordion-header">เกี่ยวกับหลุยส์ วิตตอง <span class="toggle">+</span></p>
+                <ul class="accordion-content">
+                    <li><a href="#">แฟชั่นโชว์</a></li>
+                    <li><a href="#">ศิลปะและวัฒนธรรม</a></li>
+                    <li><a href="#">เมซง</a></li>
+                    <li><a href="#">การพัฒนาอย่างยั่งยืน</a></li>
+                    <li><a href="#">ข่าวล่าสุด</a></li>
+                    <li><a href="#">ตำแหน่งงาน</a></li>
+                    <li><a href="#">Foundation Louis Vuitton</a></li>
+                </ul>
+            </div>
+
+            <!-- เชื่อมต่อ -->
+            <div class="footer-column">
+                <p class="accordion-header" id="like-foot">เชื่อมต่อ <span class="toggle">+</span></p>
+                <ul class="accordion-content">
+                    <li><a href="#" id="aaa">ลงทะเบียนเพื่อรับอีเมล</a></li>
+                    <li>ของ Louis Vuitton และรับข่าวสารล่าสุดจากเมซง
+                        รวมถึงการเปิดตัวล่วงหน้าทางออนไลน์สุดพิเศษและคอลเลคชั่นใหม่</li>
+                    <li><a href="#">ติดตามเรา</a></li>
+                    <div class="img-foot-column">
+                        <img src="./img/Logo/footter.png" alt="">
+                    </div>
+                </ul>
+
+            </div>
+        </div>
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="country">
+                จัดส่งไปที่: <img src="./img/th.svg" alt=""> <a href="#">ประเทศไทย</a>
+            </div>
+            <div class="mapweb">
+                <a href="#">แผนผังเว็บไซต์</a> |
+                <a href="#">กฎหมายและนโยบายความเป็นส่วนตัว</a>
+            </div>
+
+        </div>
+        <div class="footer-logo">LOUIS VUITTON</div>
+    </footer>
+
+
+    <!-- ปุ่ม login popup -->
+    <div id="login-popup">
+        <div class="login-header">
+            <p class="myid1">บัญชีของฉัน</p>
+            <button class="close-login">&times;</button>
+        </div>
+        <p class="myid2">ฉันมีบัยชีอยู่แล้ว</p>
+        <div class="social-login">
+            <button class="btn-line"><img src="./img/popup/LINE_logo.svg.png" alt="">ลงชื่อเข้าใช้ด้วย LINE</button>
+            <button class="btn-google"><img
+                    src="./img/popup/google-logo-google-search-icon-png-favpng-DLXaPGArrFH6yJjYE8USnMuvX.png"
+                    alt="">ลงชื่อเข้าใช้ด้วย Google</button>
+        </div>
+
+        <div class="divider">หรือ</div>
+
+        <form>
+            <label>เข้าสู่ระบบ*</label>
+            <input type="text" placeholder="อีเมล/ชื่อผู้ใช้" required>
+
+            <label>รหัสผ่าน*</label>
+            <input type="password" placeholder="รหัสผ่าน" required>
+
+            <a href="#" id="forgot-p1">ลืมรหัสผ่านใช่ไหม</a>
+            <div id="forgot-pass">
+                <p>หรือใช้ลิงก์เข้าสู่ระบบแบบใช้ครั้งเดียวเพื่อลงชื่อเข้าใช้:</p>
+                <a href="">ส่งอีเมลลิงค์ให้ฉัน</a>
+            </div>
+            <button type="submit" class="btn-login">ลงชื่อเข้าใช้</button>
+        </form>
+
+        <div class="no-account">
+            <p class="no-account-p1">ฉันยังไม่มีบัญชี My LV</p>
+            <p class="no-account-p2" id="no-account-p2">เพียงสร้างบัญชีส่วนตัว
+                คุณก็สามารถเพลิดเพลินกับสิทธิประโยชน์เพิ่มเติมและ</p>
+            <p class="no-account-p2">ประสบการณ์ที่ยอดเยี่ยมมากยิ่งขึ้น</p>
+            <button class="btn-outline">สร้างบัญชี My LV</button>
+        </div>
+    </div>
+
+    </div>
+
+
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

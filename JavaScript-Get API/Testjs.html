@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตัวละคร Rick and Morty</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        input { padding: 5px; font-size: 16px; }
+        button { padding: 5px 10px; font-size: 16px; }
+        .card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-radius: 5px;
+        }
+        .card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ตัวละครใน Rick and Morty</h1>
+
+    <form action="">
+        <input type="text" id="userInput" placeholder="ใส่ชื่อตัวละคร">
+        <button type="button" id="inputbtn">ค้นหา</button>
+    </form>
+
+    <div id="divCard"></div>
+
+    <script>
+        const nameInput = document.getElementById('userInput')
+        const btn = document.getElementById('inputbtn')
+        const divCard = document.getElementById('divCard')
+
+        btn.addEventListener("click", async function() {
+            const name = nameInput.value.trim()
+            if(!name){
+                alert("กรุณาใส่ชื่อตัวละคร")
+                return
+            }
+
+            const url = `https://rickandmortyapi.com/api/character/?name=${encodeURIComponent(name)}`
+
+            try {
+                const res = await fetch(url)
+                if(!res.ok) throw new Error("ไม่พบตัวละคร")
+
+                const data = await res.json()
+                divCard.innerHTML = "" // เคลียร์ผลลัพธ์ก่อน
+
+                data.results.forEach(character => {
+                    const card = document.createElement("div")
+                    card.classList.add("card")
+                    card.innerHTML = `
+                        <img src="${character.image}" alt="${character.name}">
+                        <div>
+                            <h3>${character.name}</h3>
+                            <p>Species: ${character.species}</p>
+                            <p>Status: ${character.status}</p>
+                        </div>
+                    `
+                    divCard.appendChild(card)
+                })
+
+            } catch (err) {
+                divCard.innerHTML = `<p>${err.message}</p>`
+            }
+        })
+    </script>
+
+</body>
+</html>

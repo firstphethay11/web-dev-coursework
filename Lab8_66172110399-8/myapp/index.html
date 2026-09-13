@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Node JS 2</title>
+</head>
+<body>
+  <h1>ข้อมูลหนังสือทั้งหมด</h1>
+  <button id="fetchBTN">ดึงข้อมูล</button>
+  <pre id="output"><!-- รอผลลัพธ์... --></pre>
+
+  <script>
+    const button = document.getElementById('fetchBTN');
+    const output = document.getElementById('output');
+
+    button.addEventListener('click', () => {
+      output.textContent = 'รอผลลัพธ์...';
+
+      setTimeout(() => {
+        fetch('http://localhost:3000/api/book').then(res => res.json()).then(data => {
+            output.textContent = JSON.stringify(data, null, 2);
+          })
+      }, 2000); 
+    });
+  </script>
+</body>
+</html>

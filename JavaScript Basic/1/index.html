@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No.1</title>
+    
+</head>
+<body>
+    <h1>ภาพยนต์ซึ่งฉายที่ เอสเอฟ ซีเนม่า</h1>
+    <ul id="movie">
+        <li id="movie1"></li>
+        <li></li>
+        <li id="movie3"></li>
+        <li></li>
+    </ul>
+
+
+    <script>
+        let movies = [
+            "อวตาร:วิถีแห่งสายน้ำ",
+            "เมแกน",
+            "มหาศึกวีรสตรีเหล็ก",
+            "คังนัมซอมบี้"
+        ];
+
+        let mayon = document.getElementById("movie1") 
+        mayon.textContent = movies[0];
+        let li = document.getElementsByTagName("li")  
+        li[1].textContent = movies[1]; 
+        li[2].textContent = movies[2];  
+        li[3].textContent = movies[3];  
+
+        
+       
+
+    </script>
+</body>
+</html>

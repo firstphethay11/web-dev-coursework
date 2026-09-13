@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No.1</title>
+    
+</head>
+<body>
+    <h1>ภาพยนต์ซึ่งฉายที่ เอสเอฟ ซีเนม่า</h1>
+    <ul id="movie">
+        <li id="movie1"></li>
+        <li></li>
+        <li id="movie3"></li>
+        <li></li>
+    </ul>
+
+
+    <script>
+        let movies = [
+            "อวตาร:วิถีแห่งสายน้ำ",
+            "เมแกน",
+            "มหาศึกวีรสตรีเหล็ก",
+            "คังนัมซอมบี้"
+        ];
+    const tagH1 = document.getElementsByTagName('h1')[0]
+    let list = document.getElementsByTagName("li");
+    list[0].onmouseover = function() {
+      tagH1.style.background = "#FFCCCC";
+    };
+    list[0].onmouseout = function() {
+      tagH1.style.background = "none";
+    };
+     list[1].onmouseover = function() {
+      tagH1.style.background = "#CCFFCC";
+    };
+    list[1].onmouseout = function() {
+      tagH1.style.background = "none";
+    };
+    list[2].onmouseover = function() {
+      tagH1.style.background = "#CC66CC";
+    };
+    list[2].onmouseout = function() {
+      tagH1.style.background = "none";
+    };
+
+     list[3].onmouseover = function() {
+      tagH1.style.background = "#66FF99";
+    };
+    list[3].onmouseout = function() {
+      tagH1.style.background = "none";
+    };
+    
+
+        let mayon = document.getElementById("movie1") 
+        mayon.textContent = movies[0];
+        let li = document.getElementsByTagName("li")  
+        li[1].textContent = movies[1]; 
+        li[2].textContent = movies[2];  
+        li[3].textContent = movies[3];  
+
+        
+       
+
+    </script>
+</body>
+</html>
