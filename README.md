@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌐 Web Application Development
+# Web Application Development
 ### RMUTI Computer Engineering • Coursework & Lab Portfolio
 
 <p align="center">
@@ -23,62 +23,62 @@
 ---
 
 > [!NOTE]
-> 🛍️ **โครงงานขนาดใหญ่ (Clone Project - Louis Vuitton E-Commerce):**  
+> **โครงงานขนาดใหญ่ (Clone Project - Louis Vuitton E-Commerce):**  
 > โปรเจกต์ร้านค้าออนไลน์ระดับ Luxury (Next.js, Tailwind CSS, Express API, MongoDB) ได้รับการแยกเป็น Repository อิสระเรียบร้อยแล้ว:  
-> 👉 [**firstphethay11/louis-vuitton-fullstack**](https://github.com/firstphethay11/louis-vuitton-fullstack)
+> [**firstphethay11/louis-vuitton-fullstack**](https://github.com/firstphethay11/louis-vuitton-fullstack)
 
 ---
 
-## 📸 ผลงานและการรันภาคปฏิบัติ (Visual Showcase)
+## ผลงานและการรันภาคปฏิบัติ (Visual Showcase)
 
 รวมภาพตัวอย่างผลลัพธ์การทำงานจริงของข้อสอบและการทดลองในห้องปฏิบัติการ
 
-### 1. 🎯 ข้อสอบกลางภาค: Responsive Landing Page (Tailwind CSS)
+### 1. ข้อสอบกลางภาค: Responsive Landing Page (Tailwind CSS)
 ออกแบบและพัฒนาหน้าเว็บไซต์แบบ Responsive สมบูรณ์แบบ รองรับทุกหน้าจอด้วย Tailwind CSS Grid และ Flexbox
 
-| 🖥️ เดสก์ท็อป (Desktop View - 1280px) | 📱 มือถือ (Mobile Responsive - 390px) |
+| Desktop View (1280px) | Mobile Responsive (390px) |
 | :---: | :---: |
 | <img src="docs/screenshots/01-exam-midterm-tailwind-desktop.png" alt="Midterm Desktop" width="100%" /> | <img src="docs/screenshots/02-exam-midterm-tailwind-mobile.png" alt="Midterm Mobile" width="75%" /> |
 | *Layout กว้าง คอลัมน์สมดุล ระบบ Hero & Product Cards* | *การจัดเรียงองค์ประกอบอัตโนมัติบนสมาร์ตโฟน* |
 
 ---
 
-### 2. 🧪 งานปฏิบัติการและการเชื่อมต่อ Web API (Labs & API Integration)
+### 2. งานปฏิบัติการและการเชื่อมต่อ Web API (Labs & API Integration)
 
 <table align="center" width="100%">
   <tr>
     <td width="50%" align="center" valign="top">
-      <h4>⛅ Weather API Real-Time Forecast</h4>
+      <h4>Weather API Real-Time Forecast</h4>
       <img src="docs/screenshots/03-lab-weather-api.png" alt="Weather API Lab" width="100%" />
-      <p align="left"><sub>🔹 ดึงข้อมูลพยากรณ์อากาศแบบเรียลไทม์ผ่าน OpenWeather API ด้วย <code>fetch()</code> แสดงอุณหภูมิ สภาพอากาศ และระดับความชื้น</sub></p>
+      <p align="left"><sub>ดึงข้อมูลพยากรณ์อากาศแบบเรียลไทม์ผ่าน OpenWeather API ด้วย <code>fetch()</code> แสดงอุณหภูมิ สภาพอากาศ และระดับความชื้น</sub></p>
     </td>
     <td width="50%" align="center" valign="top">
-      <h4>📋 Dynamic DOM Table & Form Validation</h4>
+      <h4>Dynamic DOM Table & Form Validation</h4>
       <img src="docs/screenshots/04-lab-dynamic-table-form.png" alt="Dynamic Table Form Lab" width="100%" />
-      <p align="left"><sub>🔹 ระบบบันทึกข้อมูลและตรวจสอบความถูกต้องของฟอร์ม (Validation) ก่อน Render ข้อมูลลงตาราง HTML แบบไดนามิก</sub></p>
+      <p align="left"><sub>ระบบบันทึกข้อมูลและตรวจสอบความถูกต้องของฟอร์ม (Validation) ก่อน Render ข้อมูลลงตาราง HTML แบบไดนามิก</sub></p>
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <h4>📚 Book API & Async Data Fetcher</h4>
+      <h4>Book API & Async Data Fetcher</h4>
       <img src="docs/screenshots/05-lab-book-mock-api.png" alt="Book Mock API" width="100%" />
-      <p align="left"><sub>🔹 การจัดการข้อมูลแบบ Asynchronous จำลอง REST API สำหรับสืบค้นและแสดงรายการหนังสือ</sub></p>
+      <p align="left"><sub>การจัดการข้อมูลแบบ Asynchronous จำลอง REST API สำหรับสืบค้นและแสดงรายการหนังสือ</sub></p>
     </td>
     <td width="50%" align="center" valign="top">
-      <h4>💡 IoT Smart LED & Device Web Controller</h4>
+      <h4>IoT Smart LED & Device Web Controller</h4>
       <img src="docs/screenshots/06-tool-led-controller.png" alt="IoT LED Controller" width="100%" />
-      <p align="left"><sub>🔹 หน้าควบคุมฮาร์ดแวร์ IoT สวิตช์เปิด-ปิดไฟอัจฉริยะ พร้อมระบบตั้งเวลาทำงาน (Timer) และมอนิเตอร์สถานะ</sub></p>
+      <p align="left"><sub>หน้าควบคุมฮาร์ดแวร์ IoT สวิตช์เปิด-ปิดไฟอัจฉริยะ พร้อมระบบตั้งเวลาทำงาน (Timer) และมอนิเตอร์สถานะ</sub></p>
     </td>
   </tr>
 </table>
 
 ---
 
-## 🗂️ แผนผังโครงสร้างโฟลเดอร์ (Directory Structure)
+## แผนผังโครงสร้างโฟลเดอร์ (Directory Structure)
 
 ```
 web-dev-coursework/
-├── 🧪 labs/                # งานปฏิบัติการและแบบฝึกหัดประจำสัปดาห์
+├── labs/                # งานปฏิบัติการและแบบฝึกหัดประจำสัปดาห์
 │   ├── javascript-basic/   # พื้นฐาน JavaScript (Ex. 1-5)
 │   ├── javascript-get-api/ # การดึงข้อมูลภายนอกผ่าน Fetch API
 │   ├── lab8-mock-data/     # การสร้าง Mock Data และการจำลองระบบ
@@ -88,17 +88,17 @@ web-dev-coursework/
 │   ├── nodejs-intro/       # การเริ่มต้นใช้งาน Node.js Runtime
 │   └── book-api-lab/       # ระบบจัดการข้อมูลหนังสือเชื่อมต่อ MongoDB
 │
-├── 📝 exams/               # งานสอบภาคปฏิบัติ
+├── exams/               # งานสอบภาคปฏิบัติ
 │   ├── midterm-tailwind/   # สอบกลางภาค: หน้าเว็บ Responsive ด้วย Tailwind CSS
 │   └── final-exam-api/     # สอบปลายภาค: REST API (Node.js, Express, MongoDB)
 │
-├── 📚 course-slides/       # สไลด์และเอกสารประกอบการบรรยาย (PDF 8 ชุด)
-└── ⚙️ others/              # งานทดลองและสคริปต์เสริม (AI test, JS test, Web tools)
+├── course-slides/       # สไลด์และเอกสารประกอบการบรรยาย (PDF 8 ชุด)
+└── others/              # งานทดลองและสคริปต์เสริม (AI test, JS test, Web tools)
 ```
 
 ---
 
-## 🛠️ เครื่องมือและเทคโนโลยีที่ใช้ (Tech Stack)
+## เครื่องมือและเทคโนโลยีที่ใช้ (Tech Stack)
 
 <div align="center">
 
@@ -113,12 +113,12 @@ web-dev-coursework/
 
 ---
 
-## 👨‍💻 ข้อมูลผู้จัดทำ (Author)
+## ข้อมูลผู้จัดทำ (Author)
 
 <div align="center">
 
 **นายจิรวัฒน์ เทียมทะนงค์ (Jirawat Thiamthanong)**  
-🎓 นักศึกษาสาขาวิชาวิศวกรรมคอมพิวเตอร์ (Computer Engineering)  
+นักศึกษาสาขาวิชาวิศวกรรมคอมพิวเตอร์ (Computer Engineering)  
 คณะวิศวกรรมศาสตร์และเทคโนโลยี มหาวิทยาลัยเทคโนโลยีราชมงคลอีสาน (RMUTI)  
 รหัสนักศึกษา: `66172110399-8`
 
