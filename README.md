@@ -5,7 +5,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Completed-success?style=flat-square" alt="Status" />
-  <img src="https://img.shields.io/badge/Repo-Private-red?style=flat-square&logo=github" alt="Private" />
+  <img src="https://img.shields.io/badge/Repo-Public-brightgreen?style=flat-square&logo=github" alt="Public" />
   <img src="https://img.shields.io/badge/Stack-Fullstack_JS-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="Stack" />
   <img src="https://img.shields.io/badge/Backend-Node.js%20%7C%20Express-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Backend" />
   <img src="https://img.shields.io/badge/Styling-Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind" />
