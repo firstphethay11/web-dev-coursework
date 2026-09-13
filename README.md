@@ -36,40 +36,82 @@
 ### 1. ข้อสอบกลางภาค: Responsive Landing Page (Tailwind CSS)
 ออกแบบและพัฒนาหน้าเว็บไซต์แบบ Responsive สมบูรณ์แบบ รองรับทุกหน้าจอด้วย Tailwind CSS Grid และ Flexbox
 
-| Desktop View (1280px) | Mobile Responsive (390px) |
-| :---: | :---: |
-| <img src="docs/screenshots/01-exam-midterm-tailwind-desktop.png" alt="Midterm Desktop" width="100%" /> | <img src="docs/screenshots/02-exam-midterm-tailwind-mobile.png" alt="Midterm Mobile" width="75%" /> |
-| *Layout กว้าง คอลัมน์สมดุล ระบบ Hero & Product Cards* | *การจัดเรียงองค์ประกอบอัตโนมัติบนสมาร์ตโฟน* |
+<table width="100%">
+  <thead>
+    <tr>
+      <th width="65%" align="center">เดสก์ท็อป (Desktop View - 1280px)</th>
+      <th width="35%" align="center">มือถือ (Mobile Responsive - 390px)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="65%" align="center" valign="middle">
+        <img src="docs/screenshots/01-exam-midterm-tailwind-desktop.png" alt="Midterm Desktop" width="100%" />
+      </td>
+      <td width="35%" align="center" valign="middle">
+        <img src="docs/screenshots/02-exam-midterm-tailwind-mobile.png" alt="Midterm Mobile" width="100%" />
+      </td>
+    </tr>
+    <tr>
+      <td width="65%" align="center">
+        <sub>Layout กว้าง คอลัมน์สมดุล ระบบ Hero & Product Cards</sub>
+      </td>
+      <td width="35%" align="center">
+        <sub>การจัดเรียงองค์ประกอบอัตโนมัติบนสมาร์ตโฟน</sub>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
 ### 2. งานปฏิบัติการและการเชื่อมต่อ Web API (Labs & API Integration)
 
-<table align="center" width="100%">
-  <tr>
-    <td width="50%" align="center" valign="top">
-      <h4>Weather API Real-Time Forecast</h4>
-      <img src="docs/screenshots/03-lab-weather-api.png" alt="Weather API Lab" width="100%" />
-      <p align="left"><sub>ดึงข้อมูลพยากรณ์อากาศแบบเรียลไทม์ผ่าน OpenWeather API ด้วย <code>fetch()</code> แสดงอุณหภูมิ สภาพอากาศ และระดับความชื้น</sub></p>
-    </td>
-    <td width="50%" align="center" valign="top">
-      <h4>Dynamic DOM Table & Form Validation</h4>
-      <img src="docs/screenshots/04-lab-dynamic-table-form.png" alt="Dynamic Table Form Lab" width="100%" />
-      <p align="left"><sub>ระบบบันทึกข้อมูลและตรวจสอบความถูกต้องของฟอร์ม (Validation) ก่อน Render ข้อมูลลงตาราง HTML แบบไดนามิก</sub></p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" align="center" valign="top">
-      <h4>Book API & Async Data Fetcher</h4>
-      <img src="docs/screenshots/05-lab-book-mock-api.png" alt="Book Mock API" width="100%" />
-      <p align="left"><sub>การจัดการข้อมูลแบบ Asynchronous จำลอง REST API สำหรับสืบค้นและแสดงรายการหนังสือ</sub></p>
-    </td>
-    <td width="50%" align="center" valign="top">
-      <h4>IoT Smart LED & Device Web Controller</h4>
-      <img src="docs/screenshots/06-tool-led-controller.png" alt="IoT LED Controller" width="100%" />
-      <p align="left"><sub>หน้าควบคุมฮาร์ดแวร์ IoT สวิตช์เปิด-ปิดไฟอัจฉริยะ พร้อมระบบตั้งเวลาทำงาน (Timer) และมอนิเตอร์สถานะ</sub></p>
-    </td>
-  </tr>
+<table width="100%">
+  <thead>
+    <tr>
+      <th width="50%" align="center">Weather API Real-Time Forecast</th>
+      <th width="50%" align="center">Dynamic DOM Table & Form Validation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="50%" align="center" valign="top">
+        <img src="docs/screenshots/03-lab-weather-api.png" alt="Weather API Lab" width="100%" />
+      </td>
+      <td width="50%" align="center" valign="top">
+        <img src="docs/screenshots/04-lab-dynamic-table-form.png" alt="Dynamic Table Form Lab" width="100%" />
+      </td>
+    </tr>
+    <tr>
+      <td width="50%" align="left" valign="top">
+        <sub>ดึงข้อมูลพยากรณ์อากาศแบบเรียลไทม์ผ่าน OpenWeather API ด้วย <code>fetch()</code></sub>
+      </td>
+      <td width="50%" align="left" valign="top">
+        <sub>ระบบบันทึกข้อมูลและตรวจสอบความถูกต้องของฟอร์ม (Validation) ก่อน Render ข้อมูลลงตาราง HTML</sub>
+      </td>
+    </tr>
+    <tr>
+      <th width="50%" align="center">Book API & Async Data Fetcher</th>
+      <th width="50%" align="center">IoT Smart LED & Device Web Controller</th>
+    </tr>
+    <tr>
+      <td width="50%" align="center" valign="top">
+        <img src="docs/screenshots/05-lab-book-mock-api.png" alt="Book Mock API" width="100%" />
+      </td>
+      <td width="50%" align="center" valign="top">
+        <img src="docs/screenshots/06-tool-led-controller.png" alt="IoT LED Controller" width="100%" />
+      </td>
+    </tr>
+    <tr>
+      <td width="50%" align="left" valign="top">
+        <sub>การจัดการข้อมูลแบบ Asynchronous จำลอง REST API สำหรับสืบค้นและแสดงรายการหนังสือ</sub>
+      </td>
+      <td width="50%" align="left" valign="top">
+        <sub>หน้าควบคุมฮาร์ดแวร์ IoT สวิตช์เปิด-ปิดไฟอัจฉริยะ พร้อมระบบตั้งเวลาทำงาน (Timer)</sub>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 ---
