@@ -13,13 +13,11 @@ const pool = mysql.createPool({
 }).promise();
 
 // ทดสอบการเชื่อมต่อ
-pool.getConnection((err, connection) => {
-    if (err) {
-        console.error("Cannot connect to MySQL:", err.message);
-        return;
-    }
+pool.getConnection().then((connection) => {
     console.log(`Connected to MySQL as id: ${connection.threadId}`);
     connection.release();
+}).catch((err) => {
+    console.error('Cannot connect to MySQL:', err.code || err.message);
+    console.error('Start your MySQL server and check the database settings in .env.');
 });
-
 export default pool;
